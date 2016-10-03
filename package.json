@@ -1,0 +1,34 @@
+{
+  "name": "ubc-farm-logging",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Ian McLean <ianmclean2011@gmail.com> (http://tigeroakes.com)",
+  "license": "MIT",
+  "repository": "https://github.com/NotWoods/ubc-farm/logging",
+  "browser": "dist/index.iife.js",
+  "private": true,
+  "dependencies": {
+    "react": "15.3.0",
+    "react-dom": "15.3.0",
+    "react-redux-form": "^1.0.5"
+  },
+  "devDependencies": {
+    "rollup": "0.34.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-commonjs": "^3.3.1",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-babel": "^2.6.1",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-plugin-external-helpers": "^6.8.0",
+    "redux": "^3.5.2",
+    "react-redux": "^4.4.5",
+    "redux-thunk": "^2.1.0",
+    "reselect": "^2.5.3",
+    "ubc-farm-utils": "ubc-farm/utils"
+  },
+  "files": [
+    "dist",
+    "styles",
+    "views"
+  ]
+}

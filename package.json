@@ -1,10 +1,10 @@
 {
-  "name": "ubc-farm-logging",
+  "name": "ubc-farm-page-logging",
   "version": "1.0.0",
   "description": "",
   "author": "Ian McLean <ianmclean2011@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/NotWoods/ubc-farm/logging",
+  "repository": "https://github.com/NotWoods/ubc-farm/page-logging",
   "browser": "dist/index.iife.js",
   "private": true,
   "dependencies": {

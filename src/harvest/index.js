@@ -4,6 +4,7 @@ import { Control, Form } from 'react-redux-form';
 class Harvest extends Component {
   render() {
     return (
+      <div />
       /*<Form model="user"
         onSubmit={(user) => this.handleSubmit(user)}>
         <label>First name:</label>

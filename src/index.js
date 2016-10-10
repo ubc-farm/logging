@@ -11,5 +11,5 @@ domready.then(() => {
 		<Provider store={store}>
 			<Harvest />
 		</Provider>
-	, document.getElementById('harvest-mount'));
+	, document.getElementById('app-mount'));
 });

@@ -2,7 +2,7 @@
   "name": "ubc-farm-logging",
   "version": "1.0.0",
   "description": "",
-  "author": "Ian McLean <ianmclean2011@gmail.com> (http://tigeroakes.com)",
+  "author": "Ian McLean <ianmclean2011@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/NotWoods/ubc-farm/logging",
   "browser": "dist/index.iife.js",
@@ -26,6 +26,9 @@
     "reselect": "^2.5.3",
     "ubc-farm-utils": "ubc-farm/utils"
   },
+  "scripts": {
+		"prepublish": "rollup -c"
+	},
   "files": [
     "dist",
     "styles",

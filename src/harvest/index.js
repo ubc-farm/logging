@@ -1,22 +1,34 @@
-import React, { Component } from 'react';
-import { Control, Form } from 'react-redux-form';
+import { Form } from 'react-redux-form';
+import Take from './components/take';
+import Storage from './components/storage';
+import Tracking from './components/tracking';
+import Notes from './components/notes';
 
 class Harvest extends Component {
   render() {
     return (
-      <div />
-      /*<Form model="user"
-        onSubmit={(user) => this.handleSubmit(user)}>
-        <label>First name:</label>
-        <Control.text model="user.firstName" />
-
-        <label>Last name:</label>
-        <Control.text model="user.lastName" />
-
+      <div>
+      <h1>Harvest Log Data</h1>
+      <Form>
+        <table>
+          <tr>
+            <th>Take</th>
+            <th>Storage</th>
+            <th>Tracking</th>
+            <th>Notes</th>
+          </tr>
+          <tr>
+            <Take />
+            <Storage />
+            <Tracking />
+            <Notes />
+          </tr>
+        </table>
         <button type="submit">
-          Finish registration!
+          Log Data
         </button>
-      </Form>*/
+      </Form>
+      </div>
     );
   }
 }

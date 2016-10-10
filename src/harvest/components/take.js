@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
-import { Control, Form } from 'react-redux-form';
-
 const Take = () => {
   return (
     <td>
+      <label>Quantity</label>
+      <input type="number" step="1" min="0"/>
+      <label>Units</label>
+      <select>
+        <option>kg</option>
+      </select>
     </td>
   );
 }

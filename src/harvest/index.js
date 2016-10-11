@@ -1,4 +1,5 @@
-import { Form } from 'react-redux-form';
+//import { Form } from 'react-redux-form';
+import {Component} from 'react';
 import Take from './components/take';
 import Storage from './components/storage';
 import Tracking from './components/tracking';
@@ -9,25 +10,27 @@ class Harvest extends Component {
     return (
       <div>
       <h1>Harvest Log Data</h1>
-      <Form>
-        <table>
-          <tr>
-            <th>Take</th>
-            <th>Storage</th>
-            <th>Tracking</th>
-            <th>Notes</th>
-          </tr>
-          <tr>
-            <Take />
-            <Storage />
-            <Tracking />
-            <Notes />
-          </tr>
+      <form>
+        <table className="log-table">
+          <tbody>
+            <tr>
+              <th><h5>Take</h5></th>
+              <th><h5>Storage</h5></th>
+              <th><h5>Tracking</h5></th>
+              <th><h5>Notes</h5></th>
+            </tr>
+            <tr>
+              <Take />
+              <Storage />
+              <Tracking />
+              <Notes />
+            </tr>
+          </tbody>
         </table>
-        <button type="submit">
+        <button className="submit-log" type="submit">
           Log Data
         </button>
-      </Form>
+      </form>
       </div>
     );
   }

@@ -1,8 +1,10 @@
 const Tracking = () => {
   return (
     <td>
-      <label>Barcode #</label>
-      <input type="number" step="1" min="0" />
+      <label>
+        <h5>Barcode #</h5>
+        <input type="number" step="1" min="0" />
+      </label>
     </td>
   );
 }

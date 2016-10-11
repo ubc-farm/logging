@@ -1,0 +1,29 @@
+.log-table {
+  border-collapse: collapse;
+}
+
+th {
+  border: 2px solid;
+}
+
+td {
+  width: 25%;
+  border-right: 2px solid;
+}
+
+td:last-of-type {
+  border-right: none;
+}
+
+#app-mount{
+  margin-left: 1rem;
+}
+
+#app-mount h1 {
+  margin-bottom: 1rem;
+}
+
+.submit-log {
+  margin-top: 1rem;
+  text-align: right;
+}

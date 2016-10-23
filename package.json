@@ -10,7 +10,8 @@
   "dependencies": {
     "react": "15.3.0",
     "react-dom": "15.3.0",
-    "react-redux-form": "^1.0.5"
+    "react-redux-form": "^1.0.5",
+    "redux-form": "^6.1.1"
   },
   "devDependencies": {
     "rollup": "0.34.2",
@@ -27,8 +28,8 @@
     "ubc-farm-utils": "ubc-farm/utils"
   },
   "scripts": {
-		"prepublish": "rollup -c"
-	},
+    "prepublish": "rollup -c"
+  },
   "files": [
     "dist",
     "styles",

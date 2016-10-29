@@ -24,15 +24,33 @@ class HarvestLogForm extends Component {
                 <th><h5>Notes</h5></th>
               </tr>
               <tr>
-                <Field name="take" component={Take} />
-                <Field name="storage" component={Storage} />
+                <td>
+                  <label>
+                    <h5>Quantity</h5>
+                    <Field component="input" name="take-amount" type="number" step="1" min="0"/>
+                  </label>
+                  <label>
+                    <h5>Units</h5>
+                    <Field component="select" name="take-units">
+                      <option>kg</option>
+                    </Field>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <h5>Location</h5>
+                    <Field component="select" name="location" />
+                  </label>
+                </td>
                 <td>
                   <label>
                     <h5>Barcode #</h5>
                     <Field component="input" name="barcode" type="number" step="1" min="0" />
                   </label>
                 </td>
-                <Field name="notes" component={Notes} />
+                <td>
+                  <Field component="textarea" name="harvest-notes" />
+                </td>
               </tr>
             </tbody>
           </table>

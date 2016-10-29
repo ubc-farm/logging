@@ -2,19 +2,20 @@ import {Component} from 'react';
 import { Field, reduxForm, propTypes } from 'redux-form';
 import { connect } from 'react-redux';
 
-import Take from './components/take';
+/*import Take from './components/take';
 import Storage from './components/storage';
 import Tracking from './components/tracking';
-import Notes from './components/notes';
+import Notes from './components/notes';*/
+import submitForm from '../submit';
 
 class HarvestLogForm extends Component {
   render() {
-    const { handleSubmit } = this.props;
+    const {handleSubmit} = submitForm('harvest-log');
     console.log (this);
     return (
       <div>
         <h1>Harvest Log Data</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit = {handleSubmit}>
           <table className="log-table">
             <tbody>
               <tr>
@@ -69,7 +70,5 @@ HarvestLogForm = reduxForm({
   form: 'harvest-log',
   initialValues: {barcode:10000},
 })(HarvestLogForm);
-
-//HarvestLogForm = connect()(HarvestLogForm);
 
 export default HarvestLogForm;

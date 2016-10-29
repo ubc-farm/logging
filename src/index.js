@@ -4,13 +4,12 @@ import { Provider } from 'react-redux';
 import { domready } from 'ubc-farm-utils';
 import store from './redux/index.js';
 
-import HarvestLog from './harvest/index.js';
+import HarvestLogForm from './harvest/harvestlogform';
 
 domready.then(() => {
-	//console.log(store.getState());
 	ReactDOM.render(
 		<Provider store={store}>
-			<HarvestLog />
+			<HarvestLogForm />
 		</Provider>
 	, document.getElementById('app-mount'));
 });

@@ -1,11 +1,9 @@
 import HarvestLogForm from './harvestlogform';
+import submit from '../submit';
 
 class HarvestLog extends React.Component {
   render() {
-    const handleSubmit = (values) => {
-      // Do something with the form values
-      console.log(values);
-    }
+    const handleSubmit =  submit(values, 'harvest-log');
     return (
       <HarvestLogForm onSubmit={handleSubmit} />
     );

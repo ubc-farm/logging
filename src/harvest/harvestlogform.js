@@ -1,21 +1,16 @@
 import {Component} from 'react';
 import { Field, reduxForm, propTypes } from 'redux-form';
-import { connect } from 'react-redux';
 
-/*import Take from './components/take';
-import Storage from './components/storage';
-import Tracking from './components/tracking';
-import Notes from './components/notes';*/
+//TODO: Get the column components to work with redux-form ... that will make things a bit cleaner
 import submitForm from '../submit';
 
 class HarvestLogForm extends Component {
   render() {
-    const {handleSubmit} = submitForm('harvest-log');
-    console.log (this);
+    const {handleSubmit} = this.props;
     return (
       <div>
         <h1>Harvest Log Data</h1>
-        <form onSubmit = {handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <table className="log-table">
             <tbody>
               <tr>
@@ -28,11 +23,11 @@ class HarvestLogForm extends Component {
                 <td>
                   <label>
                     <h5>Quantity</h5>
-                    <Field component="input" name="take-amount" type="number" step="1" min="0"/>
+                    <Field component="input" name="harvest-amount" type="number" step="1" min="0"/>
                   </label>
                   <label>
                     <h5>Units</h5>
-                    <Field component="select" name="take-units">
+                    <Field component="select" name="harvest-units">
                       <option>kg</option>
                     </Field>
                   </label>
@@ -40,7 +35,7 @@ class HarvestLogForm extends Component {
                 <td>
                   <label>
                     <h5>Location</h5>
-                    <Field component="select" name="location" />
+                    <Field component="select" name="harvest-storage-location" />
                   </label>
                 </td>
                 <td>
@@ -68,7 +63,9 @@ HarvestLogForm.propTypes = propTypes;
 
 HarvestLogForm = reduxForm({
   form: 'harvest-log',
+  //Just a test value for now
   initialValues: {barcode:10000},
+  onSubmit:submitForm,
 })(HarvestLogForm);
 
 export default HarvestLogForm;

@@ -1,10 +1,27 @@
 import {Component} from 'react';
 import { Field, reduxForm, propTypes } from 'redux-form';
+import locations from '../fetch.js';
 
 //TODO: Get the column components to work with redux-form ... that will make things a bit cleaner
+//than having all the columns implemented in this component, as is done now
 import submitForm from '../submit';
 
 class HarvestLogForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {};
+  }
+  componentWillMount(){
+    locations().then(locations => {
+      var locs = [];
+      for (var location in locations) {
+        if (locations.hasOwnProperty(location)) {
+          locs.push(locations[location]);
+        }
+      }
+    this.setState({locations:locs})
+    });
+  }
   render() {
     const {handleSubmit} = this.props;
     return (
@@ -35,7 +52,12 @@ class HarvestLogForm extends Component {
                 <td>
                   <label>
                     <h5>Location</h5>
-                    <Field component="select" name="harvest-storage-location" />
+                    <Field component="select" name="locationId">
+                      {this.state.locations?
+                        this.state.locations.map(location =>
+                          <option value={location.id} key={location.id}>{location.name}</option>):<option />
+                      }
+                    </Field>
                   </label>
                 </td>
                 <td>
@@ -64,7 +86,7 @@ HarvestLogForm.propTypes = propTypes;
 HarvestLogForm = reduxForm({
   form: 'harvest-log',
   //Just a test value for now
-  initialValues: {quantity:0.00},
+  initialValues: {locationId:'1', quantity:0.00},
   onSubmit:submitForm,
 })(HarvestLogForm);
 

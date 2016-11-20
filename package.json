@@ -10,7 +10,6 @@
   "dependencies": {
     "react": "15.3.0",
     "react-dom": "15.3.0",
-    "react-redux-form": "^1.0.5",
     "redux-form": "^6.1.1"
   },
   "devDependencies": {

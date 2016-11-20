@@ -23,11 +23,11 @@ class HarvestLogForm extends Component {
                 <td>
                   <label>
                     <h5>Quantity</h5>
-                    <Field component="input" name="harvest-amount" type="number" step="1" min="0"/>
+                    <Field component="input" name="quantity" type="number" step="0.01" min="0"/>
                   </label>
                   <label>
                     <h5>Units</h5>
-                    <Field component="select" name="harvest-units">
+                    <Field component="select" name="units">
                       <option>kg</option>
                     </Field>
                   </label>
@@ -45,7 +45,7 @@ class HarvestLogForm extends Component {
                   </label>
                 </td>
                 <td>
-                  <Field component="textarea" name="harvest-notes" />
+                  <Field component="textarea" name="notes" type="text" />
                 </td>
               </tr>
             </tbody>
@@ -64,7 +64,7 @@ HarvestLogForm.propTypes = propTypes;
 HarvestLogForm = reduxForm({
   form: 'harvest-log',
   //Just a test value for now
-  initialValues: {barcode:10000},
+  initialValues: {quantity:0.00},
   onSubmit:submitForm,
 })(HarvestLogForm);
 

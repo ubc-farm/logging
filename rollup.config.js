@@ -19,7 +19,7 @@ export default {
 		}),
 		commonjs({
 			exclude: ['node_modules/lodash-es/**',
-			'node_modules/symbol-observable/**',]
+			'node_modules/symbol-observable/**', 'node_modules/redux-form/**']
 		}),
 	],
 	external: ['react', 'react-dom', 'tape'],
